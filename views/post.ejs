@@ -1,0 +1,14 @@
+<%- include('header.ejs') %>
+<h1><%= title %></h1>
+<p><%= body %></p>
+<form action="/delete" method="POST">
+    <div class="del"></div>
+    <button type="submit"class="btn btn-primary"name="del"value="<%= title %>">Delete</button>
+</form>
+<style>
+    .del{
+       margin-top: 5%;
+       align-self: center;
+    }
+</style>
+<%- include('footer.ejs') %>

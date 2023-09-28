@@ -1,0 +1,37 @@
+   <%- include('header.ejs') %>
+   <h1>Home</h1>
+   <div id="homepage-intro">
+      <p>
+          Welcome to our blogging platform - your one-stop destination for thought-provoking articles, insightful stories, and engaging discussions. Navigating our blog website is as simple as it gets. On the homepage, you'll find a list of our latest and most popular articles. You can scroll through these posts, or use the categories listed on the right to filter posts by topics that interest you. 
+      </p>
+      <p>
+          Each post comes with a short preview - click on the title or 'Read More' to dive into the full article. Once you're in, engage with our community in the comments section at the end of each post. Share your thoughts, opinions, or ask questions - we value your input!
+      </p>
+      <p>
+          If you're looking for something specific, use the 'Search' bar at the top of the page. Just type in a keyword, and we'll show you all related posts. You can also browse the 'Archives' section to explore posts from previous months or years.
+      </p>
+      <p>
+          Join us in our mission to share knowledge and foster discussion. Happy reading!
+      </p>
+  </div>
+    
+    <% posts.forEach(element => { %>
+      <% console.log(element); %>
+      <h1><%= element.title %></h1>  
+      <p><%= element.discr.substring(0,100)+"....." %>
+         <a href="/posts/<%= element.title %>">Read More</a>
+      </p>
+      <% }) %>
+      
+        <footer>
+            Made by ｼ S̷ H҉ Ї ℣ ₳ Ñ S̷ H҉  ｼ.
+        </footer>
+         <style>
+            footer{
+                margin-top: 2%;
+                text-align: center;
+                font-size: larger;
+                font-family: cursive;
+            }
+         </style>
+      
